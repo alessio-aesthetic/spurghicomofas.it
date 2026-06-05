@@ -1,0 +1,56 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Disotturazione Colonne di Scarico a Como',
+  description: 'Disotturazione Colonne di Scarico a Como: intervento tecnico per più scarichi lenti nello stesso edificio, rumori nella colonna e reflussi dai piani bassi. Chiama 031 668 0329.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Servizio"
+    title="Disotturazione Colonne di Scarico a Como"
+    subtitle="Più scarichi lenti nello stesso edificio, rumori nella colonna e reflussi dai piani bassi. Quando il problema si presenta, è meglio intervenire con strumenti adeguati e una verifica finale del deflusso."
+    actions={[{ variant: 'primary', text: 'Chiama 031 668 0329', href: 'tel:0316680329' }, { variant: 'secondary', text: 'Contatti', href: '/contact/' }]}
+    image={{ src: '/images/spurghi/colonne-scarico.png', alt: 'Disotturazione Colonne di Scarico a Como' }}
+  />
+  <Content
+    items={[
+      { title: 'Valutazione iniziale', description: 'Raccogliamo informazioni su sintomi, accessi e urgenza prima di scegliere l’attrezzatura.' },
+      { title: 'Intervento mirato', description: 'Per questo servizio utilizziamo ispezione dagli accessi esistenti, pulizia progressiva e strumenti adatti alle linee comuni.' },
+      { title: 'Controllo finale', description: 'Verifichiamo il passaggio dell’acqua e lasciamo indicazioni semplici per evitare ricadute.' },
+    ]}
+    image={{ src: '/images/spurghi/colonne-scarico.png', alt: 'Disotturazione Colonne di Scarico a Como' }}
+  >
+    <Fragment slot="content">
+      <h2 class="mb-4 text-3xl font-bold tracking-tight text-slate-950">Quando serve questo intervento</h2>
+      <p>Un blocco nello scarico può nascere da residui organici, calcare, grassi, oggetti caduti accidentalmente, pendenze difficili o depositi accumulati nella tubazione. Il primo segnale spesso è un rallentamento, poi arrivano rumori, odori, gorgoglii o acqua che torna indietro.</p>
+      <p class="mt-4">Disotturazione Colonne di Scarico a Como significa affrontare il problema con attenzione agli ambienti e agli accessi disponibili. Non forziamo inutilmente tubazioni o sanitari: procediamo per gradi, controllando la reazione dello scarico e scegliendo lo strumento più adatto.</p>
+      <p class="mt-4">Il servizio è adatto a case, condomini, negozi, uffici, ristoranti, box, cortili e locali tecnici. Se il problema è urgente, il telefono resta il canale più rapido per capire come intervenire.</p>
+    </Fragment>
+  </Content>
+  <Features2
+    title="Vantaggi"
+    columns={3}
+    items={[
+      { title: 'Meno tentativi inutili', description: 'Un tecnico riconosce i segnali e lavora sul punto più probabile del blocco.', icon: 'tabler:checks' },
+      { title: 'Ambienti protetti', description: 'L’intervento viene organizzato per ridurre sporco, odori e disagio durante il lavoro.', icon: 'tabler:shield-check' },
+      { title: 'Prevenzione', description: 'Dopo la pulizia spieghiamo cosa osservare e quando pianificare un controllo.', icon: 'tabler:info-circle' },
+    ]}
+  />
+  <Features2
+    title="Domande frequenti"
+    columns={3}
+    items={[
+      { title: 'Quanto costa?', description: 'Dipende da urgenza, accessi e attrezzatura necessaria. La valutazione parte dalla chiamata.', icon: 'tabler:coin' },
+      { title: 'Serve rompere?', description: 'Prima si lavora dagli accessi disponibili: scarichi, sifoni, pozzetti o ispezioni.', icon: 'tabler:tool' },
+      { title: 'Quando chiamare?', description: 'Quando l’acqua risale, l’odore aumenta o lo scarico non è più utilizzabile.', icon: 'tabler:phone' },
+    ]}
+  />
+  <CallToAction title="Hai bisogno di disotturazione colonne di scarico?" subtitle="Chiama Spurghi Como Fast e descrivici il problema: ti aiutiamo a organizzare l’intervento." actions={[{ variant: 'primary', text: 'Chiama 031 668 0329', href: 'tel:0316680329' }]} />
+</Layout>

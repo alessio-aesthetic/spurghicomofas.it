@@ -1,0 +1,39 @@
+site:
+  name: Spurghi Como Fast
+  site: 'https://spurghicomofas.it'
+  base: '/'
+  trailingSlash: true
+
+metadata:
+  title:
+    default: 'Spurghi a Como 24H | Spurghi Como Fast'
+    template: '%s | Spurghi Como Fast'
+  description: 'Interventi di spurgo, disotturazione scarichi, videoispezioni e autospurgo a Como. Telefono attivo 24 ore su 24.'
+  robots:
+    index: true
+    follow: true
+  openGraph:
+    site_name: Spurghi Como Fast
+    images:
+      - url: '/images/spurghi/hero.png'
+        width: 1200
+        height: 630
+    type: website
+  twitter:
+    cardType: summary_large_image
+
+i18n:
+  language: it
+  textDirection: ltr
+
+apps:
+  blog:
+    isEnabled: false
+
+analytics:
+  vendors:
+    googleAnalytics:
+      id: null
+
+ui:
+  theme: 'light:only'

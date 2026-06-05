@@ -1,0 +1,203 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Spurghi a Como 24H',
+  description: 'Spurghi a Como per scarichi bloccati, fognature, fosse biologiche, videoispezioni e pronto intervento 24 ore su 24.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Intervento diretto 24H"
+    title="Spurghi a Como per scarichi, fognature e urgenze senza attese"
+    subtitle="Quando uno scarico blocca la casa o un pozzetto non riceve più acqua, serve una squadra che ascolta, arriva preparata e lavora con ordine. Spurghi Como Fast interviene su abitazioni, condomini, negozi, ristoranti, garage e cortili con mezzi adatti e comunicazione chiara."
+    actions={[
+      { variant: 'primary', text: 'Chiama 031 668 0329', href: 'tel:0316680329' },
+      { variant: 'secondary', text: 'Scrivici', href: 'mailto:assistenza@spurghicomofas.it' },
+    ]}
+    image={{ src: '/images/spurghi/hero.png', alt: 'Autospurgo professionale a Como', loading: 'eager' }}
+  />
+
+  <Content
+    id="about"
+    columns={3}
+    items={[
+      { icon: 'tabler:phone-call', title: 'Risposta rapida', description: 'Al telefono raccogliamo le informazioni decisive: tipo di scarico, accessi, urgenza, presenza di reflussi e posizione del problema.' },
+      { icon: 'tabler:truck', title: 'Mezzo corretto', description: 'Prepariamo strumenti compatti, attrezzatura da disotturazione, videoispezione o autospurgo in base al caso reale.' },
+      { icon: 'tabler:shield-check', title: 'Lavoro pulito', description: 'Proteggiamo gli ambienti, spieghiamo cosa stiamo facendo e controlliamo il deflusso prima di chiudere l’intervento.' },
+    ]}
+    image={{ src: '/images/spurghi/videoispezioni-fognature.png', alt: 'Tecnico durante una videoispezione fognaria' }}
+  >
+    <Fragment slot="content">
+      <h2 class="mb-4 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">Un servizio pensato per togliere il problema, non per complicarlo</h2>
+      <p>Un impianto di scarico non si blocca sempre per lo stesso motivo. A volte il problema è vicino al sanitario, altre volte riguarda una colonna condominiale, un pozzetto esterno, una tubazione con pendenza difficile o un accumulo cresciuto nel tempo.</p>
+      <p class="mt-4">Per questo lavoriamo con metodo: prima ascolto, poi scelta dell’attrezzatura, intervento progressivo e verifica finale. Il cliente deve sapere cosa è successo, come è stato risolto e quali segnali osservare nei giorni successivi.</p>
+    </Fragment>
+  </Content>
+
+  <Features2
+    title="Servizi più richiesti"
+    subtitle="Dalle urgenze domestiche agli impianti condominiali, ogni intervento viene gestito con strumenti adeguati e attenzione agli ambienti."
+    columns={3}
+    items={[
+  {
+    "title": "Disotturazione WC a Como",
+    "description": "WC bloccato, acqua che risale dal sanitario, bagno inutilizzabile e cattivi odori improvvisi.",
+    "icon": "tabler:toilet-paper",
+    "callToAction": {
+      "text": "Apri servizio",
+      "href": "/servizi/disotturazione-wc/"
+    }
+  },
+  {
+    "title": "Disotturazione Lavandini a Como",
+    "description": "Lavandini lenti, scarichi cucina ostruiti da grassi, sapone, calcare e residui.",
+    "icon": "tabler:droplet",
+    "callToAction": {
+      "text": "Apri servizio",
+      "href": "/servizi/disotturazione-lavandini/"
+    }
+  },
+  {
+    "title": "Disotturazione Docce e Vasche a Como",
+    "description": "Acqua che ristagna in doccia, vasche lente, pilette bloccate e odori persistenti.",
+    "icon": "tabler:bath",
+    "callToAction": {
+      "text": "Apri servizio",
+      "href": "/servizi/disotturazione-docce-vasche/"
+    }
+  },
+  {
+    "title": "Disotturazione Colonne di Scarico a Como",
+    "description": "Più scarichi lenti nello stesso edificio, rumori nella colonna e reflussi dai piani bassi.",
+    "icon": "tabler:building",
+    "callToAction": {
+      "text": "Apri servizio",
+      "href": "/servizi/disotturazione-colonne-scarico/"
+    }
+  },
+  {
+    "title": "Videoispezioni Fognature a Como",
+    "description": "Blocchi ricorrenti, sospette rotture, radici, cedimenti o punti interni da controllare.",
+    "icon": "tabler:camera-search",
+    "callToAction": {
+      "text": "Apri servizio",
+      "href": "/servizi/videoispezioni-fognature/"
+    }
+  },
+  {
+    "title": "Spurgo Fosse Biologiche a Como",
+    "description": "Fosse piene, odori persistenti, scarichi lenti e necessità di svuotamento programmato.",
+    "icon": "tabler:truck",
+    "callToAction": {
+      "text": "Apri servizio",
+      "href": "/servizi/spurgo-fosse-biologiche/"
+    }
+  }
+]}
+  />
+
+  <Steps
+    title="Come lavoriamo"
+    items={[
+      { title: 'Ascolto e priorità', description: 'Capire se l’acqua risale, se il bagno è inutilizzabile o se il problema riguarda più scarichi permette di organizzare meglio l’uscita.', icon: 'tabler:message-circle' },
+      { title: 'Intervento tecnico', description: 'Usiamo sonde, stasatrici, aspirazione, lavaggio o telecamera in base al punto da trattare, evitando manovre inutilmente invasive.', icon: 'tabler:tool' },
+      { title: 'Controllo finale', description: 'Prima di lasciare il posto verifichiamo il passaggio dell’acqua, puliamo l’area di lavoro e diamo indicazioni semplici per prevenire nuovi blocchi.', icon: 'tabler:checks' },
+    ]}
+  />
+
+  <Features3
+    title="Zone operative"
+    subtitle="Copriamo Como e diversi comuni vicini con interventi su scarichi domestici, reti private, pozzetti e fosse biologiche."
+    columns={3}
+    items={[
+  {
+    "title": "Spurghi a Como",
+    "description": "Interventi per scarichi, pozzetti, fosse biologiche e fognature nella zona di Como.",
+    "icon": "tabler:map-pin",
+    "callToAction": {
+      "text": "Apri zona",
+      "href": "/zone/como/"
+    }
+  },
+  {
+    "title": "Spurghi a Cernobbio",
+    "description": "Interventi per scarichi, pozzetti, fosse biologiche e fognature nella zona di Cernobbio.",
+    "icon": "tabler:map-pin",
+    "callToAction": {
+      "text": "Apri zona",
+      "href": "/zone/cernobbio/"
+    }
+  },
+  {
+    "title": "Spurghi a Cantù",
+    "description": "Interventi per scarichi, pozzetti, fosse biologiche e fognature nella zona di Cantù.",
+    "icon": "tabler:map-pin",
+    "callToAction": {
+      "text": "Apri zona",
+      "href": "/zone/cantu/"
+    }
+  },
+  {
+    "title": "Spurghi a Erba",
+    "description": "Interventi per scarichi, pozzetti, fosse biologiche e fognature nella zona di Erba.",
+    "icon": "tabler:map-pin",
+    "callToAction": {
+      "text": "Apri zona",
+      "href": "/zone/erba/"
+    }
+  },
+  {
+    "title": "Spurghi a Mariano Comense",
+    "description": "Interventi per scarichi, pozzetti, fosse biologiche e fognature nella zona di Mariano Comense.",
+    "icon": "tabler:map-pin",
+    "callToAction": {
+      "text": "Apri zona",
+      "href": "/zone/mariano-comense/"
+    }
+  },
+  {
+    "title": "Spurghi a Menaggio",
+    "description": "Interventi per scarichi, pozzetti, fosse biologiche e fognature nella zona di Menaggio.",
+    "icon": "tabler:map-pin",
+    "callToAction": {
+      "text": "Apri zona",
+      "href": "/zone/menaggio/"
+    }
+  }
+]}
+  />
+
+  <Testimonials
+    title="Cosa apprezzano i clienti"
+    testimonials={[
+      { testimonial: 'Telefonata chiara, tecnico preparato e scarico liberato senza sporcare il bagno. Ci hanno spiegato anche come evitare che il problema tornasse.', name: 'Cliente privato', job: 'Como' },
+      { testimonial: 'Avevamo più scarichi lenti nel condominio. Hanno individuato il punto critico e risolto con ordine, senza creare confusione nelle parti comuni.', name: 'Amministrazione condominiale', job: 'Camerlata' },
+      { testimonial: 'Intervento rapido su pozzetto pieno dopo un temporale. Comunicazione semplice, prezzo spiegato prima e lavoro lasciato pulito.', name: 'Attività commerciale', job: 'Cernobbio' },
+    ]}
+  />
+
+  <CallToAction
+    title="Scarico bloccato o fognatura in emergenza?"
+    subtitle="Chiama Spurghi Como Fast: ti aiutiamo a capire il problema e a organizzare l’intervento più adatto."
+    actions={[{ variant: 'primary', text: 'Chiama 031 668 0329', href: 'tel:0316680329' }]}
+  />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: 'Spurghi Como Fast',
+    url: 'https://spurghicomofas.it',
+    telephone: '0316680329',
+    email: 'assistenza@spurghicomofas.it',
+    address: { '@type': 'PostalAddress', streetAddress: 'Via Giuseppe Merzario, 7', postalCode: '22100', addressLocality: 'Como', addressRegion: 'CO', addressCountry: 'IT' },
+    openingHours: 'Mo-Su 00:00-23:59',
+  })} />
+</Layout>

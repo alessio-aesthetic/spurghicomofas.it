@@ -1,0 +1,14 @@
+---
+import { SITE } from 'astrowind:config';
+---
+
+<span class="flex items-center gap-3 whitespace-nowrap">
+  <span class="relative grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-sky-500 via-blue-600 to-slate-900 shadow-[0_16px_35px_rgba(37,99,235,.28)]">
+    <span class="absolute inset-1 rounded-xl border border-white/25"></span>
+    <span class="text-lg font-black text-white">S</span>
+  </span>
+  <span class="leading-tight">
+    <span class="block text-lg font-extrabold tracking-tight text-slate-950">{SITE?.name}</span>
+    <span class="block text-xs font-semibold uppercase tracking-[0.22em] text-blue-600">Como H24</span>
+  </span>
+</span>

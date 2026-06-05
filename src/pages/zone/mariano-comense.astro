@@ -1,0 +1,95 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Spurghi a Mariano Comense',
+  description: 'Spurghi a Mariano Comense: interventi su scarichi, fognature, pozzetti, fosse biologiche e videoispezioni. Servizio 24H con telefono diretto.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Zona servita"
+    title="Spurghi a Mariano Comense"
+    subtitle="Interventi per scarichi bloccati, pozzetti pieni, fosse biologiche, colonne di scarico e fognature private nella zona di Mariano Comense."
+    actions={[{ variant: 'primary', text: 'Chiama 031 668 0329', href: 'tel:0316680329' }, { variant: 'secondary', text: 'Vedi servizi', href: '/services/' }]}
+    image={{ src: '/images/spurghi/hero.png', alt: 'Spurghi a Mariano Comense' }}
+  />
+  <Content
+    items={[
+      { title: 'Aree coperte', description: 'Via Como, Via Milano, zona stazione, quartieri residenziali e aree produttive.' },
+      { title: 'Urgenze e programmi', description: 'Gestiamo sia problemi improvvisi sia manutenzioni pianificate su reti private.' },
+      { title: 'Contatto diretto', description: 'Al telefono raccogliamo posizione, accessi e sintomi per preparare meglio l’uscita.' },
+    ]}
+    image={{ src: '/images/spurghi/pozzetti-stradali.png', alt: 'Autospurgo operativo nella zona di Mariano Comense' }}
+  >
+    <Fragment slot="content">
+      <h2 class="mb-4 text-3xl font-bold tracking-tight text-slate-950">Interventi nella zona di Mariano Comense</h2>
+      <p>Spurghi a Mariano Comense significa avere un riferimento rapido quando un impianto di scarico crea disagi in casa, in condominio o in un’attività. Ogni richiesta viene ascoltata con attenzione: capire se il problema riguarda un solo punto o più scarichi insieme cambia completamente il tipo di intervento da preparare.</p>
+      <p class="mt-4">A Mariano Comense interveniamo per WC bloccati, lavandini lenti, docce e vasche che non scaricano, colonne condominiali, videoispezioni, fosse biologiche, pozzi neri, caditoie, pluviali, allagamenti e manutenzione fognature. Alcuni problemi richiedono strumenti compatti, altri un mezzo autospurgo o una verifica interna della tubazione.</p>
+      <p class="mt-4">La copertura comprende Via Como, Via Milano, zona stazione, quartieri residenziali e aree produttive. Valutiamo anche strade vicine, cortili interni, condomini, aree produttive e frazioni. Indicare punto preciso, tipo di immobile e accesso ai pozzetti permette di organizzare meglio l’uscita.</p>
+      <p class="mt-4">Se l’acqua rientra in casa, se un garage si allaga o se il bagno non si può usare, conviene chiamare subito. Se invece il problema ritorna ciclicamente, si può pianificare una pulizia preventiva.</p>
+    </Fragment>
+  </Content>
+  <Features2 title="Servizi disponibili a Mariano Comense" columns={3} items={[
+  {
+    "title": "Disotturazione WC a Como",
+    "description": "WC bloccato, acqua che risale dal sanitario, bagno inutilizzabile e cattivi odori improvvisi.",
+    "icon": "tabler:toilet-paper",
+    "callToAction": {
+      "text": "Apri servizio",
+      "href": "/servizi/disotturazione-wc/"
+    }
+  },
+  {
+    "title": "Disotturazione Lavandini a Como",
+    "description": "Lavandini lenti, scarichi cucina ostruiti da grassi, sapone, calcare e residui.",
+    "icon": "tabler:droplet",
+    "callToAction": {
+      "text": "Apri servizio",
+      "href": "/servizi/disotturazione-lavandini/"
+    }
+  },
+  {
+    "title": "Disotturazione Docce e Vasche a Como",
+    "description": "Acqua che ristagna in doccia, vasche lente, pilette bloccate e odori persistenti.",
+    "icon": "tabler:bath",
+    "callToAction": {
+      "text": "Apri servizio",
+      "href": "/servizi/disotturazione-docce-vasche/"
+    }
+  },
+  {
+    "title": "Disotturazione Colonne di Scarico a Como",
+    "description": "Più scarichi lenti nello stesso edificio, rumori nella colonna e reflussi dai piani bassi.",
+    "icon": "tabler:building",
+    "callToAction": {
+      "text": "Apri servizio",
+      "href": "/servizi/disotturazione-colonne-scarico/"
+    }
+  },
+  {
+    "title": "Videoispezioni Fognature a Como",
+    "description": "Blocchi ricorrenti, sospette rotture, radici, cedimenti o punti interni da controllare.",
+    "icon": "tabler:camera-search",
+    "callToAction": {
+      "text": "Apri servizio",
+      "href": "/servizi/videoispezioni-fognature/"
+    }
+  },
+  {
+    "title": "Spurgo Fosse Biologiche a Como",
+    "description": "Fosse piene, odori persistenti, scarichi lenti e necessità di svuotamento programmato.",
+    "icon": "tabler:truck",
+    "callToAction": {
+      "text": "Apri servizio",
+      "href": "/servizi/spurgo-fosse-biologiche/"
+    }
+  }
+]} />
+  <CallToAction title="Serve un intervento a Mariano Comense?" subtitle="Chiama Spurghi Como Fast: ti aiutiamo a capire la priorità e a scegliere l’intervento corretto." actions={[{ variant: 'primary', text: 'Chiama 031 668 0329', href: 'tel:0316680329' }]} />
+</Layout>

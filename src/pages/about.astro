@@ -1,0 +1,46 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Chi siamo',
+  description: 'Spurghi Como Fast: interventi su scarichi, fognature, pozzetti e fosse biologiche con servizio attivo 24 ore su 24.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Chi siamo"
+    title="Una squadra per scarichi e fognature che lavora con ordine"
+    subtitle="Spurghi Como Fast nasce per dare un riferimento chiaro a chi deve risolvere un problema urgente senza perdere tempo tra spiegazioni confuse, attese indefinite e interventi improvvisati."
+    actions={[{ variant: 'primary', text: 'Parla con noi', href: 'tel:0316680329' }]}
+    image={{ src: '/images/spurghi/spurgo-fosse-biologiche.png', alt: 'Autospurgo operativo a Como' }}
+  />
+  <Content
+    items={[
+      { title: 'Ascolto prima dell’uscita', description: 'Una telefonata ben fatta evita errori: chiediamo accessi, sintomi, urgenza e tipo di immobile.' },
+      { title: 'Attrezzatura proporzionata', description: 'Non tutti i blocchi richiedono lo stesso mezzo. Scegliamo strumenti in base al problema.' },
+      { title: 'Comunicazione chiara', description: 'Prima e dopo l’intervento spieghiamo cosa è stato fatto e cosa tenere sotto controllo.' },
+    ]}
+    image={{ src: '/images/spurghi/pronto-intervento-24h.png', alt: 'Tecnico spurghi in pronto intervento' }}
+  >
+    <Fragment slot="content">
+      <h2 class="mb-4 text-3xl font-bold tracking-tight text-slate-950">Perché scegliere Spurghi Como Fast</h2>
+      <p>Quando un bagno non scarica, una fossa biologica è piena o un pozzetto manda cattivi odori, la differenza la fanno metodo e tempi di risposta. L’obiettivo non è solo liberare una tubazione, ma ridurre il disagio, proteggere gli ambienti e lasciare indicazioni utili.</p>
+      <p class="mt-4">Interveniamo in abitazioni private, condomini, negozi, ristoranti, uffici, garage, cortili e aree esterne. Ogni situazione viene valutata in modo concreto, senza promettere soluzioni generiche prima di aver capito il problema.</p>
+    </Fragment>
+  </Content>
+  <Features2
+    title="Valori operativi"
+    columns={3}
+    items={[
+      { title: 'Pulizia', description: 'Protezione degli ambienti e attenzione al ripristino dell’area di lavoro.', icon: 'tabler:sparkles' },
+      { title: 'Precisione', description: 'Scelta degli strumenti in base al sintomo e agli accessi disponibili.', icon: 'tabler:target-arrow' },
+      { title: 'Continuità', description: 'Disponibilità per urgenze e interventi programmati su reti private.', icon: 'tabler:clock-24' },
+    ]}
+  />
+  <CallToAction title="Hai bisogno di un intervento?" subtitle="Chiama il numero diretto e raccontaci cosa sta succedendo." actions={[{ variant: 'primary', text: 'Chiama 031 668 0329', href: 'tel:0316680329' }]} />
+</Layout>

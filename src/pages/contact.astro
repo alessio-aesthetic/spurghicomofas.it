@@ -1,0 +1,49 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Contact from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Contatti',
+  description: 'Contatta Spurghi Como Fast: telefono 031 668 0329, email assistenza@spurghicomofas.it, sede in Via Giuseppe Merzario, 7 - 22100 Como CO.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Contatti"
+    title="Contatta Spurghi Como Fast"
+    subtitle="Per urgenze usa il telefono: è il canale più rapido quando l’acqua risale, uno scarico non è utilizzabile o un pozzetto crea odori e ristagni."
+    actions={[
+      { variant: 'primary', text: 'Chiama 031 668 0329', href: 'tel:0316680329' },
+      { variant: 'secondary', text: 'Invia email', href: 'mailto:assistenza@spurghicomofas.it' },
+    ]}
+  />
+  <Contact
+    id="form"
+    title="Richiedi informazioni"
+    subtitle="Per richieste non urgenti puoi scriverci: indica città, tipo di problema, accessi disponibili e un recapito telefonico."
+    inputs={[
+      { type: 'text', name: 'name', label: 'Nome' },
+      { type: 'text', name: 'phone', label: 'Telefono' },
+      { type: 'email', name: 'email', label: 'Email' },
+    ]}
+    textarea={{ label: 'Messaggio' }}
+    disclaimer={{ label: 'Inviando la richiesta confermi di voler essere ricontattato.' }}
+    button={{ text: 'Invia richiesta' }}
+    form={{ action: 'mailto:assistenza@spurghicomofas.it', method: 'post', enctype: 'text/plain' }}
+  />
+  <Features2
+    title="Riferimenti"
+    columns={3}
+    items={[
+      { title: 'Telefono', description: '031 668 0329 - attivo per urgenze e richieste rapide.', icon: 'tabler:phone-call' },
+      { title: 'Email', description: 'assistenza@spurghicomofas.it', icon: 'tabler:mail' },
+      { title: 'Sede', description: 'Via Giuseppe Merzario, 7 - 22100 Como CO', icon: 'tabler:map-pin' },
+    ]}
+  />
+  <section class="mx-auto max-w-7xl px-4 pb-16 sm:px-6">
+    <iframe class="h-80 w-full rounded-3xl border border-slate-200 shadow-sm" loading="lazy" src="https://www.google.com/maps?q=Via%20Giuseppe%20Merzario%207%2022100%20Como%20CO&output=embed" title="Mappa sede Spurghi Como Fast"></iframe>
+  </section>
+</Layout>
