@@ -5,11 +5,11 @@ const root = process.cwd();
 
 const business = {
   name: "Spurghi Como Fast",
-  domain: "spurghicomofast.it",
-  url: "https://spurghicomofast.it",
+  domain: "spurghicomofas.it",
+  url: "https://spurghicomofas.it",
   phone: "031 668 0329",
   phoneHref: "0316680329",
-  email: "assistenza@spurghicomofast.it",
+  email: "assistenza@spurghicomofas.it",
   address: "Via Giuseppe Merzario, 7 - 22100 Como CO",
 };
 
@@ -151,7 +151,7 @@ function write(file, html) {
   fs.mkdirSync(path.dirname(target), { recursive: true });
   const normalized = html
     .replaceAll("piu", "più")
-    .replaceAll("puo", "può")
+    .replaceAll("puo ", "può ")
     .replaceAll("perche", "perché")
     .replaceAll("attivita", "attività")
     .replaceAll("priorita", "priorità")
@@ -186,7 +186,9 @@ function write(file, html) {
     .replace(/\be vicino\b/g, "è vicino")
     .replace(/\be casuale\b/g, "è casuale")
     .replace(/\be liberare\b/g, "è liberare")
-    .replace(/\be importante\b/g, "è importante");
+    .replace(/\be importante\b/g, "è importante")
+    .replaceAll("puòi", "puoi")
+    .replaceAll("non e più", "non è più");
   fs.writeFileSync(target, normalized);
 }
 
